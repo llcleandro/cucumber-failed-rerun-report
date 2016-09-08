@@ -1,8 +1,8 @@
 # Ignore all logfiles and tempfiles.
-.log
-.txt
-.DS_Store
-.bundle
-.yardoc
-.png
-.html
+*.log
+*.txt
+*.DS_Store
+*.bundle
+*.yardoc
+*.png
+*.html
