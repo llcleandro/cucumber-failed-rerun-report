@@ -1,47 +1,48 @@
 # Reports
 
-## HTML Reports
+### HTML Reports
   Once you run the rake task, You will see HTML reports generated in the HTML files dependeing on how many process you have
 
-## JSON Reports
+### JSON Reports
   Once you run the rake task, You will see two json reports generated in the HTML files dependeing on how many process you have
 
 # Rakefile
 
   Rakefile has different tasks to perform different cucumber operations
 
-## :cleanup
+### :cleanup
 
-  This task delete old reports (html and json) and cucuber failures log file and create new one for fresh execution.
+	This task delete old reports (html and json) and cucuber failures log file and create new one for fresh execution.
 
-## :run_all
-  This task run all tags and generates HTML report
+### :run_all
+	
+	This task run all tags and generates HTML report
 
-## :delete_failed_tests
+### :delete_failed_tests
 
-  This task remove failed tests from report json and merge new report from rerun
+	This task remove failed tests from report json and merge new report from rerun
 
-## :rerun
+### :rerun
 
-  This task will rerurn only failed scenarios.
+ 	This task will rerurn only failed scenarios.
 
-## :services
+### :services
 
 	This task will run only services scenarios.
 
-## :content
+### :content
 
 	This task will run only content scenarios.
 
-## :all
+### :all
 
   This task will combine everything in one, in sequence predefined.
 
-## :services_rerun
+### :services_rerun
 
 	This task will run only services scenarios with rerun.
 
-## :content_rerun
+### :content_rerun
 
 	This task will run only content scenarios with rerun.
 
@@ -60,9 +61,9 @@
  
 # env.rb
 
-## ENV['BROWSER']
+### ENV['BROWSER']
 	It's possible test in different browsers, Chrome is the default.
 
-## After do |scenario|
+### After do |scenario|
 	At this point, in case of failure will be captured screenshot and added to the HTML report.
 
