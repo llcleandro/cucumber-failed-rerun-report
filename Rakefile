@@ -25,7 +25,7 @@ task :run_all do
 	end
 end
 
-task(:delete_failed_tests) do
+task :delete_failed_tests do
 	ReportHelpers::delete_failed_tests if File.size("cucumber_failures.txt") != 0
 end
 
@@ -36,5 +36,20 @@ task :rerun do
 	end
 end
 
+task :services do
+	puts "===== Executing Services Tests ======"
+	system "cucumber features/* -p services -p default -p formater"
+end
+
+task :content do
+	puts "===== Executing Content Tests ======"
+	system "cucumber features/* -p content -p default -p formater"
+end
+
 
 task :all => [ :cleanup, :run_all, :delete_failed_tests, :rerun  ]
+
+task :services_rerun => [:cleanup, :services, :rerun ]
+
+task :content_rerun => [:cleanup, :services, :rerun ]
+
