@@ -79,3 +79,7 @@
 ### After do |scenario|
 	At this point, in case of failure will be captured screenshot and added to the HTML report.
 
+# cucumber.yml
+
+  Cucumber lets you store and reuse commonly used cucumber command line arguments for a project. More informations, consulting: https://github.com/cucumber/cucumber/wiki/cucumber.yml
+
