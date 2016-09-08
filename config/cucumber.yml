@@ -7,3 +7,7 @@ default: -f json -o execution_log.json -x -f rerun -o cucumber_failures.txt
 rerun: -f json -o execution_log_rerun.json -x
 
 all_tags: --tag @content,@service
+
+content: --tag @content
+
+services: --tag @service BROWSER=pg
