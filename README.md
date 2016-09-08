@@ -36,7 +36,7 @@
 
 ### :all
 
-  This task will combine everything in one, in sequence predefined.
+ 	This task will combine everything in one, in sequence predefined.
 
 ### :services_rerun
 
