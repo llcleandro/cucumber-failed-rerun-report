@@ -1,10 +1,22 @@
-# Reports
+# General observations
+  This project was created to serve as a parameter for the use of "rerun", "HTML Report", "Json Report", "HTTParty" and "rake".
+  For that were consulted several sources, the main source the Shashikant Jagtap blog (http://shashikantjagtap.net/faster-bdd-parallelising-cucumber-and-re-running-failed-scenarios/).
 
 ### HTML Reports
   Once you run the rake task, You will see HTML reports generated in the HTML files dependeing on how many process you have
 
 ### JSON Reports
   Once you run the rake task, You will see two json reports generated in the HTML files dependeing on how many process you have
+
+### HTTParty
+  Is used to query web services and examine the resulting output. By default it will output the response as a pretty-printed Ruby object (useful for grokking the structure of output). This can also be overridden to output formatted XML or JSON. More information, consultign: http://johnnunemaker.com/httparty/
+
+### rake
+  Rake é um programa Make-como implementado em Ruby. Tarefas e dependências são especificados na sintaxe padrão do Ruby. More informations, consulting: https://github.com/ruby/rake
+
+### rerun
+  It's basically a alternative to autotest. Doesn't require config files and works on any command, not just Ruby programs. More informations, consulting: https://github.com/alexch/rerun/
+
 
 # Rakefile
 
