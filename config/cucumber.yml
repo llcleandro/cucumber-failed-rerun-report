@@ -1,8 +1,8 @@
-formater: --color --format pretty
+default: --color --format pretty
 
-reports: -f progress --format html --out reports/execution_report.html
+report_html: -f progress --format html --out reports/execution_report.html
 
-default: -f json -o execution_log.json -x -f rerun -o cucumber_failures.txt
+report_json: -f json -o execution_log.json -x -f rerun -o cucumber_failures.txt
 
 rerun: -f json -o execution_log_rerun.json -x
 

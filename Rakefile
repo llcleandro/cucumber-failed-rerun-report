@@ -17,7 +17,7 @@ end
 
 task :run_all do
   puts "===== Executing All Tests ======"
-  system "cucumber features/* -p all_tags -p default -p formater -p reports"
+  system "cucumber features/* -p all_tags -p default -p report_json -p report_html"
 	if File.size("cucumber_failures.txt") == 0
 		puts "======= All successfully executed tests!!! ======="
 	else
@@ -32,18 +32,18 @@ end
 task :rerun do
 	if File.size("cucumber_failures.txt") != 0
 		puts "===== Re-running Failed Scenarios ====="
-		system "cucumber @cucumber_failures.txt -p rerun -p formater"
+		system "cucumber @cucumber_failures.txt -p rerun -p default"
 	end
 end
 
 task :services do
 	puts "===== Executing Services Tests ======"
-	system "cucumber features/* -p services -p default -p formater"
+	system "cucumber features/* -p services -p report_json -p default"
 end
 
 task :content do
 	puts "===== Executing Content Tests ======"
-	system "cucumber features/* -p content -p default -p formater"
+	system "cucumber features/* -p content -p report_json -p default"
 end
 
 
